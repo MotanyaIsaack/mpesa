@@ -7,7 +7,7 @@ date_default_timezone_set('Africa/Nairobi');
     $phone = $_POST['phone'];
 
 
-    $callbackurl = "http://10a9d720.ngrok.io/Development/mpesa/dist/Payment.php";
+    $callbackurl = "http://localhost/Development/mpesa/dist/Payment.php";
     $timestamp = date('Ymdhis');
     $account_ref = 'Mpesa Test';
     $transaction_desc = 'Semester application fees';

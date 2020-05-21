@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="Motanya Isaack">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Signin Template · Bootstrap</title>
+    <title>Mpesa</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,8 +46,6 @@
         <input style="display: none" value="1" name="amount" type="number" id="amount" class="form-control">
 
         <button id="submit-mpesa" class="btn btn-lg btn-primary btn-block mt-4" type="submit">Submit</button>
-        <button id="confirm-mpesa" class="hidden btn btn-lg btn-primary btn-block" type="button">Confirm Payment</button>
-
     </form>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -62,7 +60,7 @@
             event.preventDefault();
             let phone = $('input[name=phone]');
             let amount = 1;
-            const url = "http://10a9d720.ngrok.io/Development/mpesa/dist/processMpesa.php";
+            const url = "http://localhost/Development/mpesa/dist/processMpesa.php";
             const data = $('#mpesa-stk-push-form').serializeArray();
             $.ajax({
                 url:url,
@@ -81,7 +79,7 @@
 
                         setTimeout(function () {
                             $('#message').html('');
-                            let confirmUrl = "http://10a9d720.ngrok.io/Development/mpesa/dist/ConfirmPayment.php";
+                            let confirmUrl = "http://localhost/Development/mpesa/dist/ConfirmPayment.php";
                             let dataC = {}
                             $.ajax({
                                 url:confirmUrl,
